@@ -15,3 +15,9 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
+
+    import pandas as pd
+    df = pd.read_csv('files/input/tbl1.tsv', sep='\t')
+    unicos = df['c4'].str.upper().unique()
+    unicos = sorted(unicos)
+    return unicos
